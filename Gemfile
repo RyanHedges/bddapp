@@ -1,5 +1,9 @@
 source 'https://rubygems.org'
 
+group :test do
+  gem 'cucumber-rails', require: false
+  gem 'database_cleaner'
+end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
