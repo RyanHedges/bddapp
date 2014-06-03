@@ -5,6 +5,10 @@ group :test do
   gem 'database_cleaner'
 end
 
+group :development, :test do
+  gem 'rspec-rails', '~> 2.99.0'
+end
+
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.1'
 # Use sqlite3 as the database for Active Record

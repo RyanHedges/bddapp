@@ -1,2 +1,2 @@
-Module Catalog
+module Catalog
 end

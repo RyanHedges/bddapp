@@ -2,7 +2,7 @@ Given(/^I am a guest$/) do
 end
 
 Given(/^a screencast exists$/) do
-  Catalog.stub(:all).and_return([
+  allow(Catalog).to receive(:all).and_return([
     {
       name: 'Some Screencast',
       description: 'Some description'
@@ -11,9 +11,9 @@ Given(/^a screencast exists$/) do
 end
 
 When(/^I go to the screencast catalog$/) do
-  pending # express the regexp above with the code you wish you had
+  get '/screencasts'
 end
 
 Then(/^I should see the screencast$/) do
-  pending # express the regexp above with the code you wish you had
+  expect(last_response.body).to include('Some Screencast')
 end
